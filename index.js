@@ -27,7 +27,7 @@ io.on('connection',(socket)=>{
     socket.on('user-message',message=>{
         io.emit('message',message);
     })
-})
+});
 
 app.get('/',(req,res)=>{
     return res.sendFile('/public/index.html');
